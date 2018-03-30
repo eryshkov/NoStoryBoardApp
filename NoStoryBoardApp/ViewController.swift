@@ -40,9 +40,8 @@ class ViewController: UIViewController {
         
         //Set Label's position
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: self.view.safeTopAnchor).isActive = true
-        NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .leftMargin, multiplier: 1, constant: 0).isActive = true
-        print(self.view.layoutMargins.left)
+        titleLabel.topAnchor.constraint(equalTo: self.headerView.safeTopAnchor).isActive = true
+        NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self.headerView, attribute: .leftMargin, multiplier: 1, constant: 0).isActive = true
 //        titleLabel.leftAnchor.constraint(equalTo: self.view.safeLeftAnchor, constant: self.view.layoutMargins.left).isActive = true
 //        //titleLabel.bottomAnchor.constraint(equalTo: self.titleLabel.bottomAnchor).isActive = true
 //        titleLabel.widthAnchor.constraint(equalTo: self.titleLabel.widthAnchor, multiplier: 1).isActive = true
