@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        headerView.centerXAnchor.constraint(equalTo: <#T##NSLayoutAnchor<NSLayoutXAxisAnchor>#>)
+        headerView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        headerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
     }
 
