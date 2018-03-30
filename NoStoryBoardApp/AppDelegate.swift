@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         //Create View Controller object
-        
         let mainViewController = ViewController()
         
         //Set Initial View Controller
