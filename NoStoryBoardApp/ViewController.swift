@@ -15,14 +15,14 @@ class ViewController: UIViewController {
         
         //Initialize View
         let headerView = UIView()
-        headerView.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        headerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         //Add View to the ViewController's view
         self.view.addSubview(headerView)
         
         //Set position of view using constraints
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        headerView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+        headerView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1).isActive = true
         headerView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         headerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
