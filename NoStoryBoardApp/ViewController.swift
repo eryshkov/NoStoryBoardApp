@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         headerView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         headerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
+        
+        
     }
 
 
