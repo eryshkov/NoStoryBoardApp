@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     var firstView: UIView!
     var titleLabel: UILabel!
     var buttonToNextVC: UIButton!
+    var segue: UIStoryboardSegue!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,12 +66,18 @@ class FirstViewController: UIViewController {
         NSLayoutConstraint(item: buttonToNextVC, attribute: .height, relatedBy: .equal, toItem: buttonToNextVC, attribute: .height, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: buttonToNextVC, attribute: .width, relatedBy: .equal, toItem: buttonToNextVC, attribute: .width, multiplier: 1, constant: 0).isActive = true
         
-    }
-    
-    @objc func buttonTapped(sender: UIButton){
+        
+        
         
     }
     
-    
+    @objc func buttonTapped(sender: UIButton){
+        //Initialize Segue
+        let secondViewController = SecondViewController()
+        segue = UIStoryboardSegue(identifier: "Segue", source: self, destination: secondViewController, performHandler: {
+            self.present(secondViewController, animated: true, completion: nil)
+        })
+        self.segue.perform()
+    }
 }
 
