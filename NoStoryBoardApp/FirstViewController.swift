@@ -74,7 +74,7 @@ class FirstViewController: UIViewController {
     @objc func buttonTapped(sender: UIButton){
         //Initialize Segue
         let secondViewController = SecondViewController()
-        segue = UIStoryboardSegue(identifier: "Segue", source: self, destination: secondViewController, performHandler: {
+        self.segue = UIStoryboardSegue(identifier: "Segue", source: self, destination: secondViewController, performHandler: {
             self.present(secondViewController, animated: true, completion: nil)
         })
         self.segue.perform()
