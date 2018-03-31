@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
 
         //Initialize View
         self.secondView = UIView()
-        self.secondView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.secondView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         //Add View to the ViewController's view
         self.view.addSubview(self.secondView)
