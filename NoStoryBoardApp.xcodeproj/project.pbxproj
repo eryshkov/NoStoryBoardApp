@@ -8,23 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */; };
-		5C8D0EB2206E25B100C9BD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB1206E25B100C9BD7D /* ViewController.swift */; };
+		5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */; };
 		5C8D0EB7206E25B200C9BD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */; };
 		5C8D0EBA206E25B200C9BD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */; };
 		5C8D0EC2206E489A00C9BD7D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EC1206E489A00C9BD7D /* .gitignore */; };
-		5CF4D9D820700DC100C3F2D7 /* testStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF4D9D720700DC100C3F2D7 /* testStory.storyboard */; };
 		5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C8D0EAC206E25B100C9BD7D /* NoStoryBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoStoryBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C8D0EB1206E25B100C9BD7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C8D0EB9206E25B200C9BD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8D0EBB206E25B200C9BD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8D0EC1206E489A00C9BD7D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		5CF4D9D720700DC100C3F2D7 /* testStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testStory.storyboard; sourceTree = "<group>"; };
 		5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,11 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */,
-				5C8D0EB1206E25B100C9BD7D /* ViewController.swift */,
+				5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */,
 				5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */,
 				5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */,
 				5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */,
-				5CF4D9D720700DC100C3F2D7 /* testStory.storyboard */,
 				5C8D0EBB206E25B200C9BD7D /* Info.plist */,
 			);
 			path = NoStoryBoardApp;
@@ -128,7 +125,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF4D9D820700DC100C3F2D7 /* testStory.storyboard in Resources */,
 				5C8D0EBA206E25B200C9BD7D /* LaunchScreen.storyboard in Resources */,
 				5C8D0EC2206E489A00C9BD7D /* .gitignore in Resources */,
 				5C8D0EB7206E25B200C9BD7D /* Assets.xcassets in Resources */,
@@ -142,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C8D0EB2206E25B100C9BD7D /* ViewController.swift in Sources */,
+				5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */,
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
 				5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */,
 			);
