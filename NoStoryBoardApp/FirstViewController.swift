@@ -35,6 +35,7 @@ class FirstViewController: UIViewController {
         titleLabel = UILabel()
         titleLabel.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         titleLabel.text = "First View Controller"
+        titleLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 20)
         firstView.addSubview(titleLabel)
@@ -43,6 +44,8 @@ class FirstViewController: UIViewController {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: self.firstView.safeTopAnchor).isActive = true
         NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self.firstView, attribute: .leftMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: titleLabel, attribute: .width, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: titleLabel, attribute: .height, multiplier: 1, constant: 0).isActive = true
         
         //Initialize Button
         buttonToNextVC = UIButton()

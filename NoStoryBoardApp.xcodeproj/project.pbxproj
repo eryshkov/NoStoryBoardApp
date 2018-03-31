@@ -12,6 +12,7 @@
 		5C8D0EB7206E25B200C9BD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */; };
 		5C8D0EBA206E25B200C9BD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */; };
 		5C8D0EC2206E489A00C9BD7D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D0EC1206E489A00C9BD7D /* .gitignore */; };
+		5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4D9D92070227900C3F2D7 /* LabelExt.swift */; };
 		5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		5C8D0EB9206E25B200C9BD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8D0EBB206E25B200C9BD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8D0EC1206E489A00C9BD7D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5CF4D9D92070227900C3F2D7 /* LabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExt.swift; sourceTree = "<group>"; };
 		5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				5C8D0EC1206E489A00C9BD7D /* .gitignore */,
+				5CF4D9DB207022B100C3F2D7 /* Extentions */,
 				5C8D0EAE206E25B100C9BD7D /* NoStoryBoardApp */,
 				5C8D0EAD206E25B100C9BD7D /* Products */,
 			);
@@ -59,12 +62,20 @@
 			children = (
 				5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */,
 				5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */,
-				5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */,
 				5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */,
 				5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */,
 				5C8D0EBB206E25B200C9BD7D /* Info.plist */,
 			);
 			path = NoStoryBoardApp;
+			sourceTree = "<group>";
+		};
+		5CF4D9DB207022B100C3F2D7 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */,
+				5CF4D9D92070227900C3F2D7 /* LabelExt.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */,
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
+				5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */,
 				5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
