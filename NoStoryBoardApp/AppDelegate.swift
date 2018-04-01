@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         //Create View Controller object
-        let mainViewController = FirstViewController()
-        mainViewController.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        let firstViewController = FirstViewController()
+        firstViewController.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         //Set Initial View Controller
-        window?.rootViewController = mainViewController
+        window?.rootViewController = firstViewController
         
         //Present the window
         window?.makeKeyAndVisible()
