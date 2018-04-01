@@ -36,9 +36,7 @@ class FirstViewController: UIViewController {
         return buttonToNextVC
     }()
     
-    lazy var secondViewController: UIViewController = {
-        return SecondViewController()
-    }()
+    var secondViewController: SecondViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +49,7 @@ class FirstViewController: UIViewController {
         //Set Label's position
         constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: self.view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0))
         
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: self.view.safeAreaLayoutGuide, attribute: .leadingMargin, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0))
         
         constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: titleLabel, attribute: .width, multiplier: 1, constant: 0))
         
@@ -68,7 +66,9 @@ class FirstViewController: UIViewController {
     
     @objc func buttonTapped(sender: UIButton){
         //Initialize Second View Controller
-        self.present(secondViewController, animated: true, completion: nil)
+        secondViewController = SecondViewController()
+        self.secondViewController?.previousViewController = self
+        self.present(secondViewController!, animated: true, completion: nil)
         
     
     }
