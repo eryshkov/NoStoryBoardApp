@@ -8,7 +8,17 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, PassDataDelegate {
+    
+    var textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter text to pass"
+        textField.autocorrectionType = .no
+        textField.borderStyle = .roundedRect
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return textField
+    }()
     
     var titleLabel: UILabel = {
         //Initialize Label
@@ -36,13 +46,12 @@ class FirstViewController: UIViewController {
         return buttonToNextVC
     }()
     
-    var secondViewController: SecondViewController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addSubview(titleLabel)
         self.view.addSubview(buttonToNextVC)
+        self.view.addSubview(textField)
         
         var constraints = [NSLayoutConstraint]()
         
@@ -61,14 +70,25 @@ class FirstViewController: UIViewController {
         constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .height, relatedBy: .equal, toItem: buttonToNextVC, attribute: .height, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .width, relatedBy: .equal, toItem: buttonToNextVC, attribute: .width, multiplier: 1, constant: 0))
 
+        //Set Text Field position
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .bottom, relatedBy: .equal, toItem: buttonToNextVC, attribute: .top, multiplier: 1, constant: -10))
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.25, constant: 0))
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
+        
         NSLayoutConstraint.activate(constraints)
     }
-    
+    //MARK: - Pass Data to Destination View
+    func passData(with: String) {
+        textField.text = with
+        
+    }
+
     @objc func buttonTapped(sender: UIButton){
         //Initialize Second View Controller
-        secondViewController = SecondViewController()
-        self.secondViewController?.previousViewController = self
-        self.present(secondViewController!, animated: true, completion: nil)
+        let secondViewController = SecondViewController()
+        secondViewController.previousViewController = self //Setup Delegate
+        secondViewController.textField.text = textField.text
+        self.present(secondViewController, animated: true, completion: nil)
         
     
     }

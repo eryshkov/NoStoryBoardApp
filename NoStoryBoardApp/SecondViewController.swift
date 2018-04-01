@@ -10,7 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    weak var previousViewController: UIViewController?
+    var textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter text to pass"
+        textField.autocorrectionType = .no
+        textField.borderStyle = .roundedRect
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return textField
+    }()
+    
+    weak var previousViewController: PassDataDelegate?
     
     var titleLabel: UILabel = {
         //Initialize Label
@@ -45,6 +55,7 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         view.addSubview(buttonToPreviousVC)
         view.addSubview(titleLabel)
+        view.addSubview(textField)
         
         var constraints = [NSLayoutConstraint]()
         
@@ -63,15 +74,24 @@ class SecondViewController: UIViewController {
         
         constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: titleLabel, attribute: .height, multiplier: 1, constant: 0))
         
+        //Set Text Field position
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .bottom, relatedBy: .equal, toItem: buttonToPreviousVC, attribute: .top, multiplier: 1, constant: -10))
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.25, constant: 0))
+        constraints.append(NSLayoutConstraint(item: textField, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
+        
         NSLayoutConstraint.activate(constraints)
         
     }
 
+    func passData(string: String) {
+        previousViewController?.passData(with: string)
+    }
+    
     @objc func buttonTapped(sender: UIButton){
-        
-        self.dismiss(animated: true) {
-            (self.previousViewController as! FirstViewController).secondViewController = nil
+        if let text = textField.text{
+            passData(string: text)
         }
+        self.dismiss(animated: true, completion: nil)
         
     }
     deinit {
