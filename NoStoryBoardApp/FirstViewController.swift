@@ -10,27 +10,12 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var firstView: UIView!
     var titleLabel: UILabel!
     var buttonToNextVC: UIButton!
     var segue: UIStoryboardSegue!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Initialize View
-        self.firstView = UIView()
-        self.firstView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        //Add View to the ViewController's view
-        self.view.addSubview(self.firstView)
-        
-        //Set position of view using constraints
-        self.firstView.translatesAutoresizingMaskIntoConstraints = false
-        self.firstView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        self.firstView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1).isActive = true
-        self.firstView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        self.firstView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
         //Initialize Label
         titleLabel = UILabel()
@@ -39,12 +24,12 @@ class FirstViewController: UIViewController {
         titleLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 20)
-        firstView.addSubview(titleLabel)
+        view.addSubview(titleLabel)
         
         //Set Label's position
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: self.firstView.safeTopAnchor).isActive = true
-        NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self.firstView, attribute: .leftMargin, multiplier: 1, constant: 0).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.view.safeTopAnchor).isActive = true
+        NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .leftMargin, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: titleLabel, attribute: .width, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: titleLabel, attribute: .height, multiplier: 1, constant: 0).isActive = true
         
@@ -56,13 +41,13 @@ class FirstViewController: UIViewController {
         buttonToNextVC.setTitle("To Next View", for: .normal)
         buttonToNextVC.setTitleColor(#colorLiteral(red: 0.1607843137, green: 0.4862745098, blue: 0.9647058824, alpha: 1), for: .normal)
         buttonToNextVC.setTitleColor(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), for: .highlighted)
-        firstView.addSubview(buttonToNextVC)
+        view.addSubview(buttonToNextVC)
         buttonToNextVC.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         
         //Set position of Button
         buttonToNextVC.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: buttonToNextVC, attribute: .centerX, relatedBy: .equal, toItem: self.firstView, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: buttonToNextVC, attribute: .centerY, relatedBy: .equal, toItem: self.firstView, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: buttonToNextVC, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: buttonToNextVC, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: buttonToNextVC, attribute: .height, relatedBy: .equal, toItem: buttonToNextVC, attribute: .height, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: buttonToNextVC, attribute: .width, relatedBy: .equal, toItem: buttonToNextVC, attribute: .width, multiplier: 1, constant: 0).isActive = true
         

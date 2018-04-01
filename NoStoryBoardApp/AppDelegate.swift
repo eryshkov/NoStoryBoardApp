@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Create View Controller object
         let mainViewController = FirstViewController()
+        mainViewController.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         //Set Initial View Controller
         window?.rootViewController = mainViewController
