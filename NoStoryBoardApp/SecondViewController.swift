@@ -38,11 +38,15 @@ class SecondViewController: UIViewController {
         //Initialize Button
         let buttonToNextVC = UIButton()
         //buttonToNextVC.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
-        buttonToNextVC.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        buttonToNextVC.backgroundColor = #colorLiteral(red: 0.1607843137, green: 0.4862745098, blue: 0.9647058824, alpha: 1)
         buttonToNextVC.contentEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
         buttonToNextVC.setTitle("To Previous View", for: .normal)
-        buttonToNextVC.setTitleColor(#colorLiteral(red: 0.1607843137, green: 0.4862745098, blue: 0.9647058824, alpha: 1), for: .normal)
-        buttonToNextVC.setTitleColor(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), for: .highlighted)
+        buttonToNextVC.layer.borderWidth = 1
+        buttonToNextVC.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        buttonToNextVC.layer.cornerRadius = 5
+        buttonToNextVC.clipsToBounds = true
+        buttonToNextVC.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        buttonToNextVC.setTitleColor(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), for: .highlighted)
         buttonToNextVC.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         buttonToNextVC.translatesAutoresizingMaskIntoConstraints = false
         return buttonToNextVC
@@ -70,7 +74,7 @@ class SecondViewController: UIViewController {
         
         constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0))
         
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: titleLabel, attribute: .width, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .width, multiplier: 0.3, constant: 0))
         
         constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: titleLabel, attribute: .height, multiplier: 1, constant: 0))
         
