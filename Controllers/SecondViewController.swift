@@ -41,9 +41,16 @@ class SecondViewController: UIViewController {
         return buttonToPreviousVC
     }()
     
+    //MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        LayoutSetup()
+        
+    }
+    
+    //MARK: - Layout Setup
+    fileprivate func LayoutSetup() {
         //Initialize View
         self.view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         view.addSubview(buttonToPreviousVC)
@@ -73,9 +80,9 @@ class SecondViewController: UIViewController {
         constraints.append(NSLayoutConstraint(item: textField, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
         
         NSLayoutConstraint.activate(constraints)
-        
     }
-
+    
+    //MARK: - Pass Data from Destination View
     func passData(string: String) {
         previousViewController?.passData(with: string)
     }

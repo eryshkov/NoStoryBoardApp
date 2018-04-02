@@ -38,6 +38,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         return buttonToNextVC
     }()
     
+    //MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
