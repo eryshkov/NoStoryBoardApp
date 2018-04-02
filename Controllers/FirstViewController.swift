@@ -90,8 +90,6 @@ class FirstViewController: UIViewController, PassDataDelegate {
         constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: textField, attribute: .top, multiplier: 1, constant: -20))
         constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .width, relatedBy: .equal, toItem: textField, attribute: .width, multiplier: 1, constant: 0))
-//        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .left, relatedBy: .equal, toItem: textField, attribute: .left, multiplier: 1, constant: 0))
-//        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .right, relatedBy: .equal, toItem: textField, attribute: .right, multiplier: 1, constant: 0))
 
         
         NSLayoutConstraint.activate(constraints)
