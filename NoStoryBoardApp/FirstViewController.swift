@@ -53,6 +53,10 @@ class FirstViewController: UIViewController, PassDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        LayoutSetup()
+    }
+    //MARK: - Layout Setup
+    fileprivate func LayoutSetup() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(buttonToNextVC)
         self.view.addSubview(textField)
@@ -73,7 +77,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .height, relatedBy: .equal, toItem: buttonToNextVC, attribute: .height, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .width, relatedBy: .equal, toItem: buttonToNextVC, attribute: .width, multiplier: 1, constant: 0))
-
+        
         //Set Text Field position
         constraints.append(NSLayoutConstraint(item: textField, attribute: .bottom, relatedBy: .equal, toItem: buttonToNextVC, attribute: .top, multiplier: 1, constant: -10))
         constraints.append(NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.25, constant: 0))
@@ -81,20 +85,21 @@ class FirstViewController: UIViewController, PassDataDelegate {
         
         NSLayoutConstraint.activate(constraints)
     }
-    //MARK: - Pass Data to Destination View
+    
+    //MARK: - Pass Data from Destination View
     func passData(with: String) {
         textField.text = with
         
     }
-
+    
     @objc func buttonTapped(sender: UIButton){
         //Initialize Second View Controller
         let secondViewController = SecondViewController()
         secondViewController.previousViewController = self //Setup Delegate
-        secondViewController.textField.text = textField.text
+        secondViewController.textField.text = textField.text //Pass Data to Destination View
         self.present(secondViewController, animated: true, completion: nil)
         
-    
+        
     }
 }
 
