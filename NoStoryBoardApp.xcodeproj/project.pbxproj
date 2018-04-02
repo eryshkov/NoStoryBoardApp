@@ -70,6 +70,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5C2F04D32072C3C800B8426B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2F04CB20728BF300B8426B /* driveParameters.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5C8AD9A620716A1900561FB2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +89,7 @@
 		5C8D0EA3206E25B000C9BD7D = {
 			isa = PBXGroup;
 			children = (
-				5C2F04CB20728BF300B8426B /* driveParameters.swift */,
+				5C2F04D32072C3C800B8426B /* Model */,
 				5C8D0EC1206E489A00C9BD7D /* .gitignore */,
 				5C2F04C62072202500B8426B /* Views */,
 				5CF4D9DB207022B100C3F2D7 /* Extentions */,
