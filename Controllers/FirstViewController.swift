@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController, PassDataDelegate {
-    
+    //MARK: - UI Views Setup
     var textField: UITextField = {
         let textField = MainTextField(placeholder: "Enter text to pass")
         return textField
@@ -17,13 +17,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
     
     var titleLabel: UILabel = {
         //Initialize Label
-        let titleLabel = UILabel()
-        titleLabel.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
-        titleLabel.text = "First View Controller"
-        titleLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 20)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        let titleLabel = MainLabel(text: "First View Controller", backgroundColor: #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1))
         return titleLabel
     }()
     

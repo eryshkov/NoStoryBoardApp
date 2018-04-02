@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
+    //MARK: - UI Views Setup
     var textField: UITextField = {
         let textField = MainTextField(placeholder: "Enter text to pass")
         return textField
@@ -19,13 +19,7 @@ class SecondViewController: UIViewController {
     
     var titleLabel: UILabel = {
         //Initialize Label
-        let titleLabel = UILabel()
-        titleLabel.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        titleLabel.text = "Second View Controller"
-        titleLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 20)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        let titleLabel = MainLabel(text: "Second View Controller", backgroundColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
         return titleLabel
     }()
     
