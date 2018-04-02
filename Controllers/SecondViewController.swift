@@ -36,20 +36,9 @@ class SecondViewController: UIViewController {
     
     var buttonToPreviousVC: UIButton = {
         //Initialize Button
-        let buttonToNextVC = UIButton()
-        //buttonToNextVC.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
-        buttonToNextVC.backgroundColor = #colorLiteral(red: 0.1607843137, green: 0.4862745098, blue: 0.9647058824, alpha: 1)
-        buttonToNextVC.contentEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
-        buttonToNextVC.setTitle("To Previous View", for: .normal)
-        buttonToNextVC.layer.borderWidth = 1
-        buttonToNextVC.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        buttonToNextVC.layer.cornerRadius = 5
-        buttonToNextVC.clipsToBounds = true
-        buttonToNextVC.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        buttonToNextVC.setTitleColor(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), for: .highlighted)
-        buttonToNextVC.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
-        buttonToNextVC.translatesAutoresizingMaskIntoConstraints = false
-        return buttonToNextVC
+        let buttonToPreviousVC = MainButton(title: "To Previous View")
+        buttonToPreviousVC.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
+        return buttonToPreviousVC
     }()
     
     override func viewDidLoad() {
