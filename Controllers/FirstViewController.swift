@@ -11,10 +11,21 @@ import UIKit
 class FirstViewController: UIViewController, PassDataDelegate {
     //MARK: - UI Views Setup
     
+    var mainStackView: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.axis = .vertical
+        stackView.spacing = 35
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.contentMode = .scaleToFill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     var switchStackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 30
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.contentMode = .scaleToFill
@@ -53,9 +64,8 @@ class FirstViewController: UIViewController, PassDataDelegate {
     //MARK: - Layout Setup
      func layoutSetup() {
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
-        self.view.addSubview(titleLabel)
-        self.view.addSubview(buttonToNextVC)
-        self.view.addSubview(textField)
+        view.addSubview(mainStackView)
+        mainStackView.addArrangedSubview(titleLabel)
         
         // Generate Switches and Labels dynamically
         var index = 0
@@ -76,33 +86,17 @@ class FirstViewController: UIViewController, PassDataDelegate {
             newStack.addArrangedSubview(newSwitch)
             switchStackView.addArrangedSubview(newStack)
         }
-        view.addSubview(switchStackView)
+        mainStackView.addArrangedSubview(switchStackView)
+        mainStackView.addArrangedSubview(textField)
+        mainStackView.addArrangedSubview(buttonToNextVC)
         
         var constraints = [NSLayoutConstraint]()
         
-        //Set Label's position
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .width, multiplier: 0.3, constant: 0))
-        constraints.append(NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: titleLabel, attribute: .height, multiplier: 1, constant: 0))
-        
-        //Set position of Button
-        constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .height, relatedBy: .equal, toItem: buttonToNextVC, attribute: .height, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: buttonToNextVC, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.15, constant: 0))
-        
-        //Set Text Field position
-        constraints.append(NSLayoutConstraint(item: textField, attribute: .bottom, relatedBy: .equal, toItem: buttonToNextVC, attribute: .top, multiplier: 1, constant: -10))
-        constraints.append(NSLayoutConstraint(item: textField, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.25, constant: 0))
-        constraints.append(NSLayoutConstraint(item: textField, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
-        
-        //Set StackView position
-        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 20))
-        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: textField, attribute: .top, multiplier: 1, constant: -20))
-        constraints.append(NSLayoutConstraint(item: switchStackView, attribute: .width, relatedBy: .equal, toItem: textField, attribute: .width, multiplier: 1, constant: 0))
-
+        //Set Main StackView position
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0))
         
         NSLayoutConstraint.activate(constraints)
     }
