@@ -17,7 +17,7 @@ class ElementLabel: UILabel {
         self.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         self.textAlignment = .left
         self.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {

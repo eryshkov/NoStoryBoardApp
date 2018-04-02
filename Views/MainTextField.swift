@@ -15,7 +15,7 @@ class MainTextField: UITextField {
         self.placeholder = placeholder
         self.autocorrectionType = .no
         self.borderStyle = .roundedRect
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {

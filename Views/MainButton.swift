@@ -23,7 +23,7 @@ class MainButton: UIButton{
         self.clipsToBounds = true
         self.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         self.setTitleColor(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), for: .highlighted)
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {

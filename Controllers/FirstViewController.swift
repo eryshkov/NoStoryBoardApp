@@ -9,6 +9,10 @@
 import UIKit
 
 class FirstViewController: UIViewController, PassDataDelegate {
+    
+    //MARK: - Previous VC fields
+    var additionalCost: Int?
+    
     //MARK: - UI Views Setup
     
     var mainStackView: UIStackView = {
@@ -72,7 +76,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         layoutSetup()
     }
     //MARK: - Layout Setup
-     func layoutSetup() {
+    func layoutSetup() {
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
@@ -104,12 +108,12 @@ class FirstViewController: UIViewController, PassDataDelegate {
         
         var constraints = [NSLayoutConstraint]()
         
-        //Set Main StackView position
+        //Setup Main StackView position
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0))
-        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .width, multiplier: 0.3, constant: 0))
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .width, multiplier: (300 / view.bounds.width), constant: 0))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -130,11 +134,12 @@ class FirstViewController: UIViewController, PassDataDelegate {
     }
     
     @objc func buttonTapped(sender: UIButton){
-
+        
         //Initialize Second View Controller
         let secondViewController = SecondViewController()
         secondViewController.previousViewController = self //Setup Delegate
         secondViewController.textField.text = textField.text //Pass Data to Destination View
+        secondViewController.additionalCost = self.additionalCost
         self.present(secondViewController, animated: true, completion: nil)
         
     }
@@ -147,6 +152,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
             addTotalCost += item.isChecked ? item.cost : 0
         }
         totalLabel.text = "Additional cost is \(addTotalCost)"
+        self.additionalCost = addTotalCost
     }
     
     

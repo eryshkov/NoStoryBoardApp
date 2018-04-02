@@ -12,7 +12,7 @@ class SwitchElement: UISwitch {
 
     init() {
         super.init(frame: .zero)
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -17,7 +17,7 @@ class ElementStackView: UIStackView {
         self.distribution = .fill
         self.alignment = .fill
         self.contentMode = .scaleToFill
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init(coder: NSCoder) {
