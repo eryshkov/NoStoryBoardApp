@@ -11,12 +11,7 @@ import UIKit
 class FirstViewController: UIViewController, PassDataDelegate {
     
     var textField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Enter text to pass"
-        textField.autocorrectionType = .no
-        textField.borderStyle = .roundedRect
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
+        let textField = MainTextField(placeholder: "Enter text to pass")
         return textField
     }()
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C2F04C52072200B00B8426B /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04C42072200B00B8426B /* MainButton.swift */; };
+		5C2F04C82072291500B8426B /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04C72072291500B8426B /* MainTextField.swift */; };
 		5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */; };
 		5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */; };
 		5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		5C2F04C42072200B00B8426B /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		5C2F04C72072291500B8426B /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDataDelegate.swift; sourceTree = "<group>"; };
 		5C8D0EAC206E25B100C9BD7D /* NoStoryBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoStoryBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				5C2F04C42072200B00B8426B /* MainButton.swift */,
+				5C2F04C72072291500B8426B /* MainTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
 				5C2F04C52072200B00B8426B /* MainButton.swift in Sources */,
 				5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */,
+				5C2F04C82072291500B8426B /* MainTextField.swift in Sources */,
 				5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */,
 				5CA281EF207025EA00B48395 /* SecondViewController.swift in Sources */,
 				5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */,
