@@ -96,11 +96,11 @@ class FirstViewController: UIViewController, PassDataDelegate {
     }
     
     func modelSetup(){
-        driveArray.append(DriveParameters(name: "Baby chair", cost: 200, capacity: 1, isChecked: false))
-        driveArray.append(DriveParameters(name: "Empty trunk", cost: 100, capacity: 2, isChecked: false))
-        driveArray.append(DriveParameters(name: "Music", cost: 50, capacity: 0, isChecked: false))
-        driveArray.append(DriveParameters(name: "Water", cost: 200, capacity: 0, isChecked: false))
-        driveArray.append(DriveParameters(name: "Body wagon", cost: 100, capacity: 2, isChecked: false))
+        driveArray.append(DriveParameters(name: "Baby chair", cost: 200, capacity: 1))
+        driveArray.append(DriveParameters(name: "Empty trunk", cost: 100, capacity: 2))
+        driveArray.append(DriveParameters(name: "Music", cost: 50, capacity: 0))
+        driveArray.append(DriveParameters(name: "Water", cost: 200, capacity: 0))
+        driveArray.append(DriveParameters(name: "Body wagon", cost: 100, capacity: 2))
         
     }
     

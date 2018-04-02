@@ -13,6 +13,12 @@ struct DriveParameters {
     var cost: Int
     var capacity: Int
     var isChecked: Bool
+    init(name:String, cost: Int, capacity: Int, isChecked: Bool = false) {
+        self.name = name
+        self.cost = cost
+        self.capacity = capacity
+        self.isChecked = isChecked
+    }
 }
 
 var driveArray = [DriveParameters]()
