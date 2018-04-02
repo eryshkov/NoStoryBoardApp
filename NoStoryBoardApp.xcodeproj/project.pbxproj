@@ -57,7 +57,7 @@
 				5C8D0EC1206E489A00C9BD7D /* .gitignore */,
 				5CF4D9DB207022B100C3F2D7 /* Extentions */,
 				5C8AD9A620716A1900561FB2 /* Protocols */,
-				5C8D0EAE206E25B100C9BD7D /* NoStoryBoardApp */,
+				5C8D0EAE206E25B100C9BD7D /* Controllers */,
 				5C8D0EAD206E25B100C9BD7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C8D0EAE206E25B100C9BD7D /* NoStoryBoardApp */ = {
+		5C8D0EAE206E25B100C9BD7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */,
@@ -80,7 +80,7 @@
 				5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */,
 				5C8D0EBB206E25B200C9BD7D /* Info.plist */,
 			);
-			path = NoStoryBoardApp;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		5CF4D9DB207022B100C3F2D7 /* Extentions */ = {
@@ -306,7 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2EB4KC7497;
-				INFOPLIST_FILE = NoStoryBoardApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Controllers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.keenetic.eugem.NoStoryBoardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,7 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2EB4KC7497;
-				INFOPLIST_FILE = NoStoryBoardApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Controllers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.keenetic.eugem.NoStoryBoardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
