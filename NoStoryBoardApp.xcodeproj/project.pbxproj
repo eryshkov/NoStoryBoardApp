@@ -10,6 +10,10 @@
 		5C2F04C52072200B00B8426B /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04C42072200B00B8426B /* MainButton.swift */; };
 		5C2F04C82072291500B8426B /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04C72072291500B8426B /* MainTextField.swift */; };
 		5C2F04CA20722B7A00B8426B /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04C920722B7A00B8426B /* MainLabel.swift */; };
+		5C2F04CC20728BF300B8426B /* driveParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04CB20728BF300B8426B /* driveParameters.swift */; };
+		5C2F04CE2072926D00B8426B /* SwitchElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04CD2072926D00B8426B /* SwitchElement.swift */; };
+		5C2F04D02072941100B8426B /* ElementStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04CF2072941100B8426B /* ElementStackView.swift */; };
+		5C2F04D22072954900B8426B /* ElementLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04D12072954900B8426B /* ElementLabel.swift */; };
 		5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */; };
 		5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */; };
 		5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */; };
@@ -25,6 +29,10 @@
 		5C2F04C42072200B00B8426B /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		5C2F04C72072291500B8426B /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		5C2F04C920722B7A00B8426B /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
+		5C2F04CB20728BF300B8426B /* driveParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = driveParameters.swift; sourceTree = "<group>"; };
+		5C2F04CD2072926D00B8426B /* SwitchElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchElement.swift; sourceTree = "<group>"; };
+		5C2F04CF2072941100B8426B /* ElementStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementStackView.swift; sourceTree = "<group>"; };
+		5C2F04D12072954900B8426B /* ElementLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementLabel.swift; sourceTree = "<group>"; };
 		5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDataDelegate.swift; sourceTree = "<group>"; };
 		5C8D0EAC206E25B100C9BD7D /* NoStoryBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoStoryBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +60,9 @@
 		5C2F04C62072202500B8426B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5C2F04CD2072926D00B8426B /* SwitchElement.swift */,
+				5C2F04D12072954900B8426B /* ElementLabel.swift */,
+				5C2F04CF2072941100B8426B /* ElementStackView.swift */,
 				5C2F04C42072200B00B8426B /* MainButton.swift */,
 				5C2F04C920722B7A00B8426B /* MainLabel.swift */,
 				5C2F04C72072291500B8426B /* MainTextField.swift */,
@@ -70,6 +81,7 @@
 		5C8D0EA3206E25B000C9BD7D = {
 			isa = PBXGroup;
 			children = (
+				5C2F04CB20728BF300B8426B /* driveParameters.swift */,
 				5C8D0EC1206E489A00C9BD7D /* .gitignore */,
 				5C2F04C62072202500B8426B /* Views */,
 				5CF4D9DB207022B100C3F2D7 /* Extentions */,
@@ -181,14 +193,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2F04D02072941100B8426B /* ElementStackView.swift in Sources */,
 				5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */,
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
+				5C2F04CC20728BF300B8426B /* driveParameters.swift in Sources */,
 				5C2F04C52072200B00B8426B /* MainButton.swift in Sources */,
+				5C2F04CE2072926D00B8426B /* SwitchElement.swift in Sources */,
 				5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */,
 				5C2F04C82072291500B8426B /* MainTextField.swift in Sources */,
 				5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */,
 				5C2F04CA20722B7A00B8426B /* MainLabel.swift in Sources */,
 				5CA281EF207025EA00B48395 /* SecondViewController.swift in Sources */,
+				5C2F04D22072954900B8426B /* ElementLabel.swift in Sources */,
 				5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
