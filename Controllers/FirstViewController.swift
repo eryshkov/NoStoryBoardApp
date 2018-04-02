@@ -29,7 +29,6 @@ class FirstViewController: UIViewController, PassDataDelegate {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.contentMode = .scaleToFill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -44,8 +43,19 @@ class FirstViewController: UIViewController, PassDataDelegate {
     
     var titleLabel: UILabel = {
         //Initialize Label
-        let titleLabel = MainLabel(text: "Call a taxi", backgroundColor: .clear)
-        return titleLabel
+        let newLabel = MainLabel(text: "Call a taxi", backgroundColor: .clear)
+        return newLabel
+    }()
+    
+    var totalLabel: UILabel = {
+        let newLabel = UILabel(frame: .zero)
+        newLabel.backgroundColor = .clear
+        newLabel.text = "Additional cost is "
+        newLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
+        newLabel.textAlignment = .left
+        newLabel.numberOfLines = 1
+        newLabel.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        return newLabel
     }()
     
     var buttonToNextVC: UIButton = {
@@ -86,7 +96,9 @@ class FirstViewController: UIViewController, PassDataDelegate {
             newStack.addArrangedSubview(newSwitch)
             switchStackView.addArrangedSubview(newStack)
         }
+        
         mainStackView.addArrangedSubview(switchStackView)
+        mainStackView.addArrangedSubview(totalLabel)
         mainStackView.addArrangedSubview(textField)
         mainStackView.addArrangedSubview(buttonToNextVC)
         
@@ -97,6 +109,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0))
+        constraints.append(NSLayoutConstraint(item: mainStackView, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: view, attribute: .width, multiplier: 0.3, constant: 0))
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -129,6 +142,11 @@ class FirstViewController: UIViewController, PassDataDelegate {
     @objc func switchValueChanged(sender: UISwitch){
         driveArray[sender.tag-100].isChecked = sender.isOn
         
+        var addTotalCost = 0
+        for item in driveArray {
+            addTotalCost += item.isChecked ? item.cost : 0
+        }
+        totalLabel.text = "Additional cost is \(addTotalCost)"
     }
     
     

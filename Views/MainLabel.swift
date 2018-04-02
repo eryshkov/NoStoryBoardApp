@@ -16,8 +16,8 @@ class MainLabel: UILabel {
         self.text = text
         self.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         self.textAlignment = .center
-        self.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        self.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        //self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
