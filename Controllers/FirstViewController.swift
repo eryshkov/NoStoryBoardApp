@@ -56,13 +56,25 @@ class FirstViewController: UIViewController, PassDataDelegate {
         self.view.addSubview(titleLabel)
         self.view.addSubview(buttonToNextVC)
         self.view.addSubview(textField)
-        for item in driveArray {// Generate Switches and Labels dynamically
-            switchArray.append(SwitchElement())
-            labelArray.append(ElementLabel(text: item.name, backgroundColor: .clear))
-            stackViewArray.append(ElementStackView())
-            stackViewArray.last?.addArrangedSubview(labelArray.last!)
-            stackViewArray.last?.addArrangedSubview(switchArray.last!)
-            switchStackView.addArrangedSubview(stackViewArray.last!)
+        
+        // Generate Switches and Labels dynamically
+        var index = 0
+        for item in driveArray {
+            
+            let newSwitch = SwitchElement()
+            newSwitch.addTarget(self, action: #selector(switchValueChanged(sender:)), for: .valueChanged)
+            newSwitch.tag = 100 + index
+            index += 1
+            switchArray.append(newSwitch)
+            
+            let newLabel = ElementLabel(text: item.name, backgroundColor: .clear)
+            labelArray.append(newLabel)
+            
+            let newStack = ElementStackView()
+            stackViewArray.append(newStack)
+            newStack.addArrangedSubview(newLabel)
+            newStack.addArrangedSubview(newSwitch)
+            switchStackView.addArrangedSubview(newStack)
         }
         view.addSubview(switchStackView)
         
@@ -118,7 +130,28 @@ class FirstViewController: UIViewController, PassDataDelegate {
         secondViewController.textField.text = textField.text //Pass Data to Destination View
         self.present(secondViewController, animated: true, completion: nil)
         
+    }
+    
+    @objc func switchValueChanged(sender: UISwitch){
+        driveArray[sender.tag-100].isChecked = sender.isOn
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
