@@ -137,8 +137,14 @@ class FirstViewController: UIViewController, PassDataDelegate {
         
         //Initialize Second View Controller
         let secondViewController = SecondViewController()
-        secondViewController.previousViewController = self //Setup Delegate
-        secondViewController.textField.text = textField.text //Pass Data to Destination View
+        
+        //Setup Delegate. It's needed for feedback from Destination View
+        secondViewController.previousViewController = self
+        
+        //Pass Data to Destination View
+        let message = textField.text! == "" ? "No message to the driver" : "Message to the driver: \(textField.text!)"
+        secondViewController.messageLabel.text = message
+        
         secondViewController.additionalCost = self.additionalCost
         self.present(secondViewController, animated: true, completion: nil)
         

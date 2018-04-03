@@ -69,6 +69,17 @@ class SecondViewController: UIViewController {
         return newLabel
     }()
     
+    var messageLabel: UILabel = {
+        let newLabel = UILabel(frame: .zero)
+        newLabel.backgroundColor = .clear
+        newLabel.text = ""
+        newLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
+        newLabel.textAlignment = .left
+        newLabel.numberOfLines = 1
+        newLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        return newLabel
+    }()
+    
     var textField: UITextField = {
         let textField = MainTextField(placeholder: "Type YES to accept")
         return textField
@@ -109,6 +120,7 @@ class SecondViewController: UIViewController {
         mainStackView.addArrangedSubview(costLabel)
         mainStackView.addArrangedSubview(addLabel)
         mainStackView.addArrangedSubview(totalLabel)
+        mainStackView.addArrangedSubview(messageLabel)
         mainStackView.addArrangedSubview(textField)
         mainStackView.addArrangedSubview(buttonToPreviousVC)
         
@@ -124,7 +136,7 @@ class SecondViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
-    //MARK: - Initial Calculation
+    //MARK: - Label init
     func performCalculation() {
         self.cost = Int(arc4random_uniform(1000))
         costLabel.text = "The cost of travel is \(cost ?? 0)"
