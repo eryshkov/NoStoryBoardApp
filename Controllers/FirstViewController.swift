@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController, PassDataDelegate {
     
+    var carImageName: String?
+    
     //MARK: - Previous VC fields
     var additionalCost: Int?
     
@@ -123,7 +125,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         driveArray.append(DriveParameters(name: "Empty trunk", cost: 100, capacity: 2))
         driveArray.append(DriveParameters(name: "Music", cost: 50, capacity: 0))
         driveArray.append(DriveParameters(name: "Water", cost: 200, capacity: 0))
-        driveArray.append(DriveParameters(name: "Body wagon", cost: 100, capacity: 2))
+        driveArray.append(DriveParameters(name: "Body wagon", cost: 100, capacity: 4))
         
     }
     
@@ -146,6 +148,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         secondViewController.messageLabel.text = message
         
         secondViewController.additionalCost = self.additionalCost
+        secondViewController.carImageName = self.carImageName
         self.present(secondViewController, animated: true, completion: nil)
         
     }
@@ -154,11 +157,22 @@ class FirstViewController: UIViewController, PassDataDelegate {
         driveArray[sender.tag-100].isChecked = sender.isOn
         
         var addTotalCost = 0
+        var totalCapacity = 0
         for item in driveArray {
             addTotalCost += item.isChecked ? item.cost : 0
+            totalCapacity += item.isChecked ? item.capacity : 0
         }
         totalLabel.text = addTotalCost != 0 ? "Additional cost is \(addTotalCost)" : "No additional cost"
         self.additionalCost = addTotalCost
+        
+        switch totalCapacity {
+        case 0:
+            self.carImageName = "matiz"
+        case 1...3:
+            self.carImageName = "lancer"
+        default:
+            self.carImageName = "truck"
+        }
     }
     
     

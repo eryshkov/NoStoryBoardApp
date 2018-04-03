@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController, PassDataDelegate {
     
+    var carImageName: String?
+    
     //MARK: - Previous VC fields
     var additionalCost: Int?
     var cost: Int?
@@ -157,6 +159,7 @@ class SecondViewController: UIViewController, PassDataDelegate {
         
         let carViewController = CarViewController()
         carViewController.previousVC = self //Set Delegate to next VC
+        carViewController.carImageName = self.carImageName
         self.present(carViewController, animated: true, completion: nil)
         
     }
