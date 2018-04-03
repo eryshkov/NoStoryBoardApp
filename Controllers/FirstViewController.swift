@@ -142,7 +142,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         secondViewController.previousViewController = self
         
         //Pass Data to Destination View
-        let message = messageToDriverField.text! == "" ? "No message to the driver" : "Message to the driver: \(messageToDriverField.text!)"
+        let message = messageToDriverField.text! == "" ? "No message to the driver" : "Message to the driver:\n\(messageToDriverField.text!)"
         secondViewController.messageLabel.text = message
         
         secondViewController.additionalCost = self.additionalCost

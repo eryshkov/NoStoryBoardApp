@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, PassDataDelegate {
     
     //MARK: - Previous VC fields
     var additionalCost: Int?
@@ -75,7 +75,8 @@ class SecondViewController: UIViewController {
         newLabel.text = ""
         newLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         newLabel.textAlignment = .left
-        newLabel.numberOfLines = 1
+        newLabel.numberOfLines = 0
+        newLabel.lineBreakMode = .byWordWrapping
         newLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return newLabel
     }()
@@ -140,14 +141,22 @@ class SecondViewController: UIViewController {
     }
     
     //MARK: - Pass Data from Destination View
-    func passData(string: String) {
+    
+    func sendData(string: String) {// Sending data to previous View
         previousViewController?.passData(with: string)
     }
     
+    func passData(with: String) {//Protocol adopted method
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func buttonTapped(sender: UIButton){
-        passData(string: "Total cost was \(totalCost)")
+        sender.isHidden = true
+        
+        sendData(string: "Total cost was \(totalCost)")
         
         let carViewController = CarViewController()
+        carViewController.previousVC = self //Set Delegate to next VC
         self.present(carViewController, animated: true, completion: nil)
         
     }
