@@ -80,10 +80,6 @@ class SecondViewController: UIViewController {
         return newLabel
     }()
     
-    var textField: UITextField = {
-        let textField = MainTextField(placeholder: "Type YES to accept")
-        return textField
-    }()
     
     weak var previousViewController: PassDataDelegate?
     
@@ -121,7 +117,6 @@ class SecondViewController: UIViewController {
         mainStackView.addArrangedSubview(addLabel)
         mainStackView.addArrangedSubview(totalLabel)
         mainStackView.addArrangedSubview(messageLabel)
-        mainStackView.addArrangedSubview(textField)
         mainStackView.addArrangedSubview(buttonToPreviousVC)
         
         var constraints = [NSLayoutConstraint]()
@@ -139,8 +134,8 @@ class SecondViewController: UIViewController {
     //MARK: - Label init
     func performCalculation() {
         self.cost = Int(arc4random_uniform(1000))
-        costLabel.text = "The cost of travel is \(cost ?? 0)"
-        addLabel.text = "Additional cost is \(additionalCost ?? 0)"
+        costLabel.text = (cost ?? 0) != 0 ? "The cost of travel is \(cost ?? 0)" : "Free travel"
+        addLabel.text = (additionalCost ?? 0) != 0 ? "Additional cost is \(additionalCost ?? 0)" : "No additional cost"
         totalLabel.text = "Total: \(totalCost)"
     }
     
@@ -150,9 +145,7 @@ class SecondViewController: UIViewController {
     }
     
     @objc func buttonTapped(sender: UIButton){
-        if let text = textField.text{
-            passData(string: text)
-        }
+        passData(string: "Total cost was \(totalCost)")
         self.dismiss(animated: true, completion: nil)
         
     }

@@ -40,7 +40,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
     var labelArray = [ElementLabel]()
     var stackViewArray = [ElementStackView]()
     
-    var textField: UITextField = {
+    var messageToDriverField: UITextField = {
         let textField = MainTextField(placeholder: "Message to the driver")
         return textField
     }()
@@ -54,7 +54,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
     var totalLabel: UILabel = {
         let newLabel = UILabel(frame: .zero)
         newLabel.backgroundColor = .clear
-        newLabel.text = "Additional cost is "
+        newLabel.text = "No additional cost"
         newLabel.padding = UIEdgeInsetsMake(3, 3, 3, 3)
         newLabel.textAlignment = .left
         newLabel.numberOfLines = 1
@@ -80,6 +80,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
+        mainStackView.addArrangedSubview(messageToDriverField)
         
         // Generate Switches and Labels dynamically
         var index = 0
@@ -103,7 +104,6 @@ class FirstViewController: UIViewController, PassDataDelegate {
         
         mainStackView.addArrangedSubview(switchStackView)
         mainStackView.addArrangedSubview(totalLabel)
-        mainStackView.addArrangedSubview(textField)
         mainStackView.addArrangedSubview(buttonToNextVC)
         
         var constraints = [NSLayoutConstraint]()
@@ -129,7 +129,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
     
     //MARK: - Pass Data from Destination View
     func passData(with: String) {
-        textField.text = with
+        messageToDriverField.text = with
         
     }
     
@@ -142,7 +142,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         secondViewController.previousViewController = self
         
         //Pass Data to Destination View
-        let message = textField.text! == "" ? "No message to the driver" : "Message to the driver: \(textField.text!)"
+        let message = messageToDriverField.text! == "" ? "No message to the driver" : "Message to the driver: \(messageToDriverField.text!)"
         secondViewController.messageLabel.text = message
         
         secondViewController.additionalCost = self.additionalCost
@@ -157,7 +157,7 @@ class FirstViewController: UIViewController, PassDataDelegate {
         for item in driveArray {
             addTotalCost += item.isChecked ? item.cost : 0
         }
-        totalLabel.text = "Additional cost is \(addTotalCost)"
+        totalLabel.text = addTotalCost != 0 ? "Additional cost is \(addTotalCost)" : "No additional cost"
         self.additionalCost = addTotalCost
     }
     
