@@ -46,8 +46,15 @@ class CarViewController: UIViewController {
     //MARK: - Layout setup
     func layoutSetup(){
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
+        
+        let carImage = UIImage(named: "matiz")
+        let carImageView = UIImageView(image: carImage)
+        carImageView.autoresizingMask = .flexibleWidth
+        carImageView.frame.size.height = 280.0
+        
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
+        mainStackView.addArrangedSubview(carImageView)
         mainStackView.addArrangedSubview(returnToMainButton)
         
         var constraints = [NSLayoutConstraint]()
