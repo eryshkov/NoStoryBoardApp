@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, PassDataDelegate {
+class FirstViewController: UIViewController, PassDataDelegate, UITextFieldDelegate {
     
     var carImageName: String?
     
@@ -79,6 +79,9 @@ class FirstViewController: UIViewController, PassDataDelegate {
     }
     //MARK: - Layout Setup
     func layoutSetup() {
+        
+        messageToDriverField.delegate = self
+        
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
@@ -175,7 +178,14 @@ class FirstViewController: UIViewController, PassDataDelegate {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true);
+    }
     
     
     
