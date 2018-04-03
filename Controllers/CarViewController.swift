@@ -11,7 +11,9 @@ import UIKit
 class CarViewController: UIViewController {
     
     var previousVC: PassDataDelegate?
+    var carName: String?
     
+    //MARK: - UI Views Setup
     var mainStackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
@@ -23,8 +25,8 @@ class CarViewController: UIViewController {
         return stackView
     }()
     
-    var callTaxiButton: UIButton = {
-        let buttonToNextVC = MainButton(title: "Call")
+    var returnToMainButton: UIButton = {
+        let buttonToNextVC = MainButton(title: "Return")
         buttonToNextVC.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         return buttonToNextVC
     }()
@@ -46,7 +48,7 @@ class CarViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
-        mainStackView.addArrangedSubview(callTaxiButton)
+        mainStackView.addArrangedSubview(returnToMainButton)
         
         var constraints = [NSLayoutConstraint]()
         
