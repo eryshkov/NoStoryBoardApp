@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, PassDataDelegate {
+class SecondViewController: UIViewController {
     
     var carImageName: String?
     
@@ -148,9 +148,6 @@ class SecondViewController: UIViewController, PassDataDelegate {
         previousViewController?.passData(with: string)
     }
     
-    func passData(with: String) {//Protocol adopted method
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @objc func buttonTapped(sender: UIButton){
         sender.isHidden = true

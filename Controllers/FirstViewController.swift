@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, PassDataDelegate, UITextFieldDelegate {
+class FirstViewController: UIViewController {
     
     var carImageName: String?
     
@@ -132,12 +132,6 @@ class FirstViewController: UIViewController, PassDataDelegate, UITextFieldDelega
         
     }
     
-    //MARK: - Pass Data from Destination View
-    func passData(with: String) {
-        messageToDriverField.text = with
-        
-    }
-    
     @objc func buttonTapped(sender: UIButton){
         
         //Initialize Second View Controller
@@ -178,14 +172,7 @@ class FirstViewController: UIViewController, PassDataDelegate, UITextFieldDelega
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true);
-    }
+
     
     
     

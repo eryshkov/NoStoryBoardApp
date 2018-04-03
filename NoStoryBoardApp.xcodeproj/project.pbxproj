@@ -24,6 +24,8 @@
 		5CA281EF207025EA00B48395 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA281EE207025EA00B48395 /* SecondViewController.swift */; };
 		5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4D9D92070227900C3F2D7 /* LabelExt.swift */; };
 		5CFC3FAD206EA5220008E8F6 /* SafeAreaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */; };
+		5CFC96ED20740B50002BCEB3 /* FirstViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC96EC20740B50002BCEB3 /* FirstViewControllerExt.swift */; };
+		5CFC96EF20740CE7002BCEB3 /* SecondViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC96EE20740CE7002BCEB3 /* SecondViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		5CA281EE207025EA00B48395 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5CF4D9D92070227900C3F2D7 /* LabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExt.swift; sourceTree = "<group>"; };
 		5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaExt.swift; sourceTree = "<group>"; };
+		5CFC96EC20740B50002BCEB3 /* FirstViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerExt.swift; sourceTree = "<group>"; };
+		5CFC96EE20740CE7002BCEB3 /* SecondViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				5CFC3FAC206EA5220008E8F6 /* SafeAreaExt.swift */,
+				5CFC96EC20740B50002BCEB3 /* FirstViewControllerExt.swift */,
+				5CFC96EE20740CE7002BCEB3 /* SecondViewControllerExt.swift */,
 				5CF4D9D92070227900C3F2D7 /* LabelExt.swift */,
 			);
 			path = Extentions;
@@ -208,12 +214,14 @@
 				5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */,
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
 				5C2F04D720738C9D00B8426B /* CarViewController.swift in Sources */,
+				5CFC96EF20740CE7002BCEB3 /* SecondViewControllerExt.swift in Sources */,
 				5C2F04CC20728BF300B8426B /* driveParameters.swift in Sources */,
 				5C2F04C52072200B00B8426B /* MainButton.swift in Sources */,
 				5C2F04CE2072926D00B8426B /* SwitchElement.swift in Sources */,
 				5CF4D9DA2070227900C3F2D7 /* LabelExt.swift in Sources */,
 				5C2F04C82072291500B8426B /* MainTextField.swift in Sources */,
 				5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */,
+				5CFC96ED20740B50002BCEB3 /* FirstViewControllerExt.swift in Sources */,
 				5C2F04CA20722B7A00B8426B /* MainLabel.swift in Sources */,
 				5CA281EF207025EA00B48395 /* SecondViewController.swift in Sources */,
 				5C2F04D22072954900B8426B /* ElementLabel.swift in Sources */,
