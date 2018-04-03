@@ -164,3 +164,10 @@ class SecondViewController: UIViewController {
         print("deinit Second VC")
     }
 }
+// MARK: - Delegate Extentions
+extension SecondViewController: PassDataDelegate{
+    //Pass Data from Destination View Controller
+    func passData(with: String) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}

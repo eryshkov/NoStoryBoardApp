@@ -172,21 +172,24 @@ class FirstViewController: UIViewController {
         }
     }
     
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+}
+// MARK: - Delegate Extentions
+extension FirstViewController: UITextFieldDelegate{
+    // Hides keyboard on RETURN Button
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    // Hides keyboard on Touch Outside Tap
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true);
+    }
 }
 
+extension FirstViewController: PassDataDelegate{
+    //Pass Data from Destination View Controller
+    func passData(with: String) {
+        messageToDriverField.text = with
+        
+    }
+}
