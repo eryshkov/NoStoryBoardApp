@@ -14,6 +14,7 @@
 		5C2F04CE2072926D00B8426B /* SwitchElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04CD2072926D00B8426B /* SwitchElement.swift */; };
 		5C2F04D02072941100B8426B /* ElementStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04CF2072941100B8426B /* ElementStackView.swift */; };
 		5C2F04D22072954900B8426B /* ElementLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04D12072954900B8426B /* ElementLabel.swift */; };
+		5C2F04D720738C9D00B8426B /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F04D620738C9D00B8426B /* CarViewController.swift */; };
 		5C8AD9A52071690600561FB2 /* PassDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */; };
 		5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */; };
 		5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */; };
@@ -33,6 +34,7 @@
 		5C2F04CD2072926D00B8426B /* SwitchElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchElement.swift; sourceTree = "<group>"; };
 		5C2F04CF2072941100B8426B /* ElementStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementStackView.swift; sourceTree = "<group>"; };
 		5C2F04D12072954900B8426B /* ElementLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementLabel.swift; sourceTree = "<group>"; };
+		5C2F04D620738C9D00B8426B /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		5C8AD9A42071690600561FB2 /* PassDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDataDelegate.swift; sourceTree = "<group>"; };
 		5C8D0EAC206E25B100C9BD7D /* NoStoryBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoStoryBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				5C8D0EAF206E25B100C9BD7D /* AppDelegate.swift */,
 				5C8D0EB1206E25B100C9BD7D /* FirstViewController.swift */,
 				5CA281EE207025EA00B48395 /* SecondViewController.swift */,
+				5C2F04D620738C9D00B8426B /* CarViewController.swift */,
 				5C8D0EB6206E25B200C9BD7D /* Assets.xcassets */,
 				5C8D0EB8206E25B200C9BD7D /* LaunchScreen.storyboard */,
 				5C8D0EBB206E25B200C9BD7D /* Info.plist */,
@@ -204,6 +207,7 @@
 				5C2F04D02072941100B8426B /* ElementStackView.swift in Sources */,
 				5C8D0EB2206E25B100C9BD7D /* FirstViewController.swift in Sources */,
 				5C8D0EB0206E25B100C9BD7D /* AppDelegate.swift in Sources */,
+				5C2F04D720738C9D00B8426B /* CarViewController.swift in Sources */,
 				5C2F04CC20728BF300B8426B /* driveParameters.swift in Sources */,
 				5C2F04C52072200B00B8426B /* MainButton.swift in Sources */,
 				5C2F04CE2072926D00B8426B /* SwitchElement.swift in Sources */,

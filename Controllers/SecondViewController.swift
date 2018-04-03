@@ -146,7 +146,9 @@ class SecondViewController: UIViewController {
     
     @objc func buttonTapped(sender: UIButton){
         passData(string: "Total cost was \(totalCost)")
-        self.dismiss(animated: true, completion: nil)
+        
+        let carViewController = CarViewController()
+        self.present(carViewController, animated: true, completion: nil)
         
     }
     deinit {
