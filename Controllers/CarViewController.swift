@@ -10,7 +10,7 @@ import UIKit
 
 class CarViewController: UIViewController {
     
-    var previousVC: PassDataDelegate?
+    weak var previousVC: PassDataDelegate?
     var carImageName: String?
     
     //MARK: - UI Views Setup
